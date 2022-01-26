@@ -1,0 +1,10 @@
+/*
+!.gitignore
+!/src/
+!/asset/
+!/build.js
+!/chanplayer.bat
+!/package-lock.json
+!/package.json
+!/tsconfig.json
+!/webpack.config.json

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <video-player id="main-video-player" data-loop="loop" data-autoplay="autoplay"></video-player>
+
+        <!-- /// VIDEO PLAYER === -->
+        <template id="video-player-style-shadow">
+            <style type="text/css">
+                .video-player__text-crossed { text-decoration: line-through; }	
+                .video-player__video { width: 100%; height: 100%; position: fixed;top:0;left: 0;}
+                .media-control__controls {
+                    width: 100%;
+                    height:2.4rem;
+                    background-color: rgba(53, 30, 30, 0.4);
+                    vertical-align: middle;
+                    padding: 1px;
+                    overflow: hidden;
+                    display: none;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                }
+                .media-control__controls:hover, .media-control__controls.hovered {
+                    display: block;
+                    margin-top: calc(-2.4rem - 2px);
+                }
+            </style>
+        </template>
+        <!-- === VIDEO PLAYER /// -->
+        <!-- /// MEDIA CONTROLS === -->
+        <template id="media-control-style-shadow">
+            <style type="text/css">
+                .media-control__control { margin: 0; padding: 0; display: inline-block; }
+                .media-control__name { display: block; width: 100%; height: 1rem; text-align: center; overflow: hidden; }
+                .media-control__volume { width: 5rem; }
+                .media-control__btn-play, .media-control__btn-pause { width: 3.5rem; }
+                .media-control__btn-loop { width: 3rem; }
+                .media-control__time-code { width: calc(100% - 3.5rem - 3rem - 3px - 5rem); }
+                .media-control__time-code::-moz-progress-bar { background-color: #6495ED; }
+                .media-control__time-code::-webkit-progress-bar { background-color: #6495ED; }
+                .media-control__time-code::progress-bar { background-color: #6495ED; }
+                .hidden, [hidden] { display: none !important; }
+            </style>
+        </template>
+        <!-- === MEDIA CONTROLS /// -->
+
+        <script async="async" src="bundle.js"></script>
+    </body>
+</html>
