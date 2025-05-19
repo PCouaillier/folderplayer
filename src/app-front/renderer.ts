@@ -75,6 +75,10 @@ let videos: string[] = [];
 
 readDir()
     .then((_videos) => {
+        if (_videos.length === 0) {
+            console.debug({message: 'folder has no video', _videos});
+            return;
+        }
         indexVideo = 0;
         videos = _videos;
         const player = document.getElementById('main-video-player') as VideoPlayer;
