@@ -271,15 +271,15 @@ export class VideoPlayer extends HTMLElement implements HTMLMediaElement {
 	public readonly seeking!: boolean;
 	public readonly srcObject!: MediaStream | MediaSource | Blob | null;
 	public readonly textTracks!: TextTrackList;
-	public readonly HAVE_CURRENT_DATA!: number;
-	public readonly HAVE_ENOUGH_DATA!: number;
-	public readonly HAVE_FUTURE_DATA!: number;
-	public readonly HAVE_METADATA!: number;
-	public readonly HAVE_NOTHING!: number;
-	public readonly NETWORK_EMPTY!: number;
-	public readonly NETWORK_IDLE!: number;
-	public readonly NETWORK_LOADING!: number;
-	public readonly NETWORK_NO_SOURCE!: number;
+	public readonly HAVE_CURRENT_DATA!: 2;
+	public readonly HAVE_ENOUGH_DATA!: 4;
+	public readonly HAVE_FUTURE_DATA!: 3;
+	public readonly HAVE_METADATA!: 1;
+	public readonly HAVE_NOTHING!: 0;
+	public readonly NETWORK_EMPTY!: 0;
+	public readonly NETWORK_IDLE!: 1;
+	public readonly NETWORK_LOADING!: 2;
+	public readonly NETWORK_NO_SOURCE!: 3;
 
 	public static get observedAttributes() {
 		return [
